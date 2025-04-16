@@ -32,8 +32,3 @@ include:
     
   - board: nice_nano_v2 
     shield: tester_pro_micro
-
-  - board: nice_nano_v2
-    shield: splitkb_aurora_lily58_left
-    snippet: zmk-usb-logging
-    artifact-name: splitkb_aurora_lily58_left_usb-logging
