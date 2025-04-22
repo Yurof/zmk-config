@@ -16,7 +16,7 @@
 };
 
 &sensors {
-    triggers-per-rotation = <20>;
+    triggers-per-rotation = <40>;
 };
 
 / {
@@ -26,73 +26,73 @@
         // F-key combos - F+number on lower layer
         combo_f1 {
             timeout-ms = <50>;
-            key-positions = <16 12>;  // F key + 1 key positions
+            key-positions = <28 0>;  // F key + 1 key positions
             bindings = <&kp F1>;
             layers = <1>;
         };
         combo_f2 {
             timeout-ms = <50>;
-            key-positions = <16 13>;  // F key + 2 key positions
+            key-positions = <28 1>;  // F key + 2 key positions
             bindings = <&kp F2>;
             layers = <1>;
         };
         combo_f3 {
             timeout-ms = <50>;
-            key-positions = <16 14>;  // F key + 3 key positions
+            key-positions = <28 2>;  // F key + 3 key positions
             bindings = <&kp F3>;
             layers = <1>;
         };
         combo_f4 {
             timeout-ms = <50>;
-            key-positions = <16 15>;  // F key + 4 key positions
+            key-positions = <28 3>;  // F key + 4 key positions
             bindings = <&kp F4>;
             layers = <1>;
         };
         combo_f5 {
             timeout-ms = <50>;
-            key-positions = <16 16>;  // F key + 5 key positions
+            key-positions = <28 4>;  // F key + 5 key positions
             bindings = <&kp F5>;
             layers = <1>;
         };
         combo_f6 {
             timeout-ms = <50>;
-            key-positions = <16 17>;  // F key + 6 key positions
+            key-positions = <28 5>;  // F key + 6 key positions
             bindings = <&kp F6>;
             layers = <1>;
         };
         combo_f7 {
             timeout-ms = <50>;
-            key-positions = <16 18>;  // F key + 7 key positions
+            key-positions = <28 6>;  // F key + 7 key positions
             bindings = <&kp F7>;
             layers = <1>;
         };
         combo_f8 {
             timeout-ms = <50>;
-            key-positions = <16 19>;  // F key + 8 key positions
+            key-positions = <28 7>;  // F key + 8 key positions
             bindings = <&kp F8>;
             layers = <1>;
         };
         combo_f9 {
             timeout-ms = <50>;
-            key-positions = <16 20>;  // F key + 9 key positions
+            key-positions = <28 8>;  // F key + 9 key positions
             bindings = <&kp F9>;
             layers = <1>;
         };
         combo_f10 {
             timeout-ms = <50>;
-            key-positions = <16 21>;  // F key + 0 key positions
+            key-positions = <28 9>;  // F key + 0 key positions
             bindings = <&kp F10>;
             layers = <1>;
         };
         combo_f11 {
             timeout-ms = <50>;
-            key-positions = <16 22>;  // F key + - key positions
+            key-positions = <28 10>;  // F key + - key positions
             bindings = <&kp F11>;
             layers = <1>;
         };
         combo_f12 {
             timeout-ms = <50>;
-            key-positions = <16 23>;  // F key + = key positions
+            key-positions = <28 11>;  // F key + = key positions
             bindings = <&kp F12>;
             layers = <1>;
         };
@@ -114,15 +114,15 @@
                 &kp N1      &kp N2               &kp N3     &kp N4     &kp N5     &kp N6                            &kp N7     &kp N8            &kp N9     &kp N0     &kp MINUS          &kp EQUAL
                 &kp TAB     &kp Q                &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp U             &kp I      &kp O      &kp P              &kp LBKT
                 &kp LSHFT   &kp A                &kp S      &kp D      &kp F      &kp G                             &kp H      &kp J             &kp K      &kp L      &kp SEMI           &kp SQT
-                &kp LCTRL   &kp NON_US_BACKSLASH &kp Z      &kp X      &kp C      &kp V      &kp B     &kp B        &kp N      &kp M             &kp COMMA  &kp DOT    &kp FSLH           &kp BACKSLASH
+                &kp LCTRL   &kp NON_US_BACKSLASH &kp Z      &kp X      &kp C      &kp V      &kp B     &trans       &kp N      &kp M             &kp COMMA  &kp DOT    &kp FSLH           &kp BACKSLASH
                                                             &kp LGUI   &kp LALT   &mo 1      &kp SPACE &kp RET      &kp BSPC   &kp RIGHT_ALT     &kp DELETE
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
         // ------------------------------------------------------------------------------------------------------------
         // |  ESC     |       |       |      |      |      |                     |      |      |      |      |        |       |
-        // |          |       |       |      |      |      |                     |      | HOME |   ↑  | END  | PSCRN  |   ]   |
-        // | CAPSLOCK |       |       |      |      |      |                     |      |   ←  |   ↓  |  →   |        |       |
+        // |          |       |   ↑   |      |      |      |                     |      | HOME |   ↑  | END  | PSCRN  |   ]   |
+        // | CAPSLOCK |    ←  |   ↓   |  →   |      |      |                     |      |   ←  |   ↓  |  →   |        |       |
         // |          |       |       |      |      |      |        | - |        |      |      |      |      |        |       |
         //                            |      |      |      | LAYER  | - |        |      |      |      |
 
@@ -130,10 +130,10 @@
             display-name = "LOW.";
             bindings = <
                 &kp ESC      &trans      &trans      &trans        &trans         &trans                         &trans     &trans      &trans     &trans      &trans            &trans
-                &trans       &trans      &trans      &trans        &trans         &trans                         &trans     &kp HOME    &kp UP     &kp END     &kp PSCRN         &kp RBKT
-                &kp CAPSLOCK &trans      &trans      &trans        &trans         &trans                         &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans            &trans
+                &trans       &trans      &kp UP      &trans        &trans         &trans                         &trans     &kp HOME    &kp UP     &kp END     &kp PSCRN         &kp RBKT
+                &kp CAPSLOCK &kp LEFT    &kp DOWN    &kp RIGHT     &trans         &trans                         &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans            &trans
                 &trans       &trans      &trans      &trans        &trans         &trans     &trans    &trans    &trans     &trans      &trans     &trans      &trans            &trans
-                                         &trans      &trans        &trans         &trans     &mo 2     &trans    &trans     &trans
+                                                     &trans        &trans         &trans     &kp RET   &mo 2     &trans     &trans      &trans
             >;
             
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
