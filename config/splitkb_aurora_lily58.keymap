@@ -16,7 +16,7 @@
 };
 
 &sensors {
-    triggers-per-rotation = <40>;
+    triggers-per-rotation = <20>;
 };
 
 / {
@@ -123,14 +123,14 @@
         // |  ESC     |       |       |      |      |      |                     |      |      |      |      |        |       |
         // |          |       |       |      |      |      |                     |      | HOME |   ↑  | END  | PSCRN  |   ]   |
         // | CAPSLOCK |       |       |      |      |      |                     |      |   ←  |   ↓  |  →   |        |       |
-        // | RESET    |       |       |      |      |      |        | - |        |      |      |      |      |        |       |
+        // |          |       |       |      |      |      |        | - |        |      |      |      |      |        |       |
         //                            |      |      |      |LAYER   | - |        |      |      |      |
 
         function_layer {
             display-name = "LOW.";
             bindings = <
                 &kp ESC      &trans      &trans      &trans        &trans         &trans                         &trans     &trans      &trans     &trans      &trans            &trans
-            &trans       &trans      &trans      &trans        &trans         &trans                             &trans     &kp HOME    &kp UP     &kp END     &kp PSCRN         &kp RBKT
+                &trans       &trans      &trans      &trans        &trans         &trans                         &trans     &kp HOME    &kp UP     &kp END     &kp PSCRN         &kp RBKT
                 &kp CAPSLOCK &trans      &trans      &trans        &trans         &trans                         &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans            &trans
                 &trans       &trans      &trans      &trans        &trans         &trans     &trans    &trans    &trans     &trans      &trans     &trans      &trans            &trans
                                          &trans      &trans        &trans         &trans     &mo 2     &trans    &trans     &trans
@@ -146,7 +146,7 @@
         // |      |EP_TOG |       |      |      |      |        | - |        |      |      |      |      |EP_TOG  | RESET |
         //  |---------------------|      |      |      |        | - |        |      |      |      |------------------------
                                   -----------------------------------------------------------------
-        function_layer {
+        system_layer {
             display-name = "SYS.";
             bindings = <
                 &trans       &trans             &trans        &trans        &trans         &trans                            &trans     &trans    &trans     &trans      &trans            &trans
