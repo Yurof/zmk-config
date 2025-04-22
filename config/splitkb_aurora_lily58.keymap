@@ -20,6 +20,84 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        
+        // F-key combos - F+number on lower layer
+        combo_f1 {
+            timeout-ms = <50>;
+            key-positions = <16 12>;  // F key + 1 key positions
+            bindings = <&kp F1>;
+            layers = <1>;
+        };
+        combo_f2 {
+            timeout-ms = <50>;
+            key-positions = <16 13>;  // F key + 2 key positions
+            bindings = <&kp F2>;
+            layers = <1>;
+        };
+        combo_f3 {
+            timeout-ms = <50>;
+            key-positions = <16 14>;  // F key + 3 key positions
+            bindings = <&kp F3>;
+            layers = <1>;
+        };
+        combo_f4 {
+            timeout-ms = <50>;
+            key-positions = <16 15>;  // F key + 4 key positions
+            bindings = <&kp F4>;
+            layers = <1>;
+        };
+        combo_f5 {
+            timeout-ms = <50>;
+            key-positions = <16 16>;  // F key + 5 key positions
+            bindings = <&kp F5>;
+            layers = <1>;
+        };
+        combo_f6 {
+            timeout-ms = <50>;
+            key-positions = <16 17>;  // F key + 6 key positions
+            bindings = <&kp F6>;
+            layers = <1>;
+        };
+        combo_f7 {
+            timeout-ms = <50>;
+            key-positions = <16 18>;  // F key + 7 key positions
+            bindings = <&kp F7>;
+            layers = <1>;
+        };
+        combo_f8 {
+            timeout-ms = <50>;
+            key-positions = <16 19>;  // F key + 8 key positions
+            bindings = <&kp F8>;
+            layers = <1>;
+        };
+        combo_f9 {
+            timeout-ms = <50>;
+            key-positions = <16 20>;  // F key + 9 key positions
+            bindings = <&kp F9>;
+            layers = <1>;
+        };
+        combo_f10 {
+            timeout-ms = <50>;
+            key-positions = <16 21>;  // F key + 0 key positions
+            bindings = <&kp F10>;
+            layers = <1>;
+        };
+        combo_f11 {
+            timeout-ms = <50>;
+            key-positions = <16 22>;  // F key + - key positions
+            bindings = <&kp F11>;
+            layers = <1>;
+        };
+        combo_f12 {
+            timeout-ms = <50>;
+            key-positions = <16 23>;  // F key + = key positions
+            bindings = <&kp F12>;
+            layers = <1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -31,7 +109,7 @@
             //                       | GUI  |  ALT |  LAYER   |  SPACE | - | ENTER | BSPC |  RALT | DEL   |
 
         default_layer {
-            display-name = "default";
+            display-name = "DEF.";
             bindings = <
                 &kp N1      &kp N2               &kp N3     &kp N4     &kp N5     &kp N6                            &kp N7     &kp N8            &kp N9     &kp N0     &kp MINUS          &kp EQUAL
                 &kp TAB     &kp Q                &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp U             &kp I      &kp O      &kp P              &kp LBKT
@@ -42,19 +120,39 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
         // ------------------------------------------------------------------------------------------------------------
-        // |  F1      |  F2   |  F3   |  F4  |  F5  |  F6  |                     |  F7  |  F8  |  F9  |  F10 |  F11   |  F12  |
-        // | ESC      | BTCLR | BT0   |  BT1 |  BT2 |  BT3 |                     |PSCRN | HOME |   ↑  |  END |RGB_TOG |RGB_BRI|
-        // | CAPSLOCK |OUT_TOG|       |      |      |      |                     |      |   ←  |   ↓  |  →   |RGB_EFF |RGB_BRD|
-        // | RESET    |EP_TOG |       |      |      |      |        | - |        |      |      |      |      |EP_TOG  | RESET |
-        //                            |      |      |      |        | - |        |      |      |      |
+        // |  ESC     |       |       |      |      |      |                     |      |      |      |      |        |       |
+        // |          |       |       |      |      |      |                     |      | HOME |   ↑  | END  | PSCRN  |   ]   |
+        // | CAPSLOCK |       |       |      |      |      |                     |      |   ←  |   ↓  |  →   |        |       |
+        // | RESET    |       |       |      |      |      |        | - |        |      |      |      |      |        |       |
+        //                            |      |      |      |LAYER   | - |        |      |      |      |
 
         function_layer {
-            display-name = "lower";
+            display-name = "LOW.";
             bindings = <
-                &kp F1       &kp F2             &kp F3        &kp F4        &kp F5         &kp F6                            &kp F7     &kp F8      &kp F9     &kp F10     &kp F11           &kp F12
-                &kp ESC      &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3                      &kp PSCRN  &kp HOME    &kp UP     &kp END     &rgb_ug RGB_TOG   &rgb_ug RGB_BRI
-                &kp CAPSLOCK &out OUT_TOG       &trans        &trans        &trans         &trans                            &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &rgb_ug RGB_EFF   &rgb_ug RGB_BRD
-                &sys_reset   &ext_power EP_TOG  &trans        &trans        &trans         &trans        &trans    &trans    &trans     &trans      &trans     &trans      &ext_power EP_TOG &sys_reset
+                &kp ESC      &trans      &trans      &trans        &trans         &trans                         &trans     &trans      &trans     &trans      &trans            &trans
+            &trans       &trans      &trans      &trans        &trans         &trans                             &trans     &kp HOME    &kp UP     &kp END     &kp PSCRN         &kp RBKT
+                &kp CAPSLOCK &trans      &trans      &trans        &trans         &trans                         &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans            &trans
+                &trans       &trans      &trans      &trans        &trans         &trans     &trans    &trans    &trans     &trans      &trans     &trans      &trans            &trans
+                                         &trans      &trans        &trans         &trans     &mo 2     &trans    &trans     &trans
+            >;
+            
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        // ---------------------------------------------------------------------------------------------------------------
+        // |  F1  |  F2   |  F3   |  F4  |  F5  |  F6  |                     |  F7  |  F8  |  F9  |  F10 |  F11   |  F12  |
+        // | BTCLR| BT0   |  BT1  |  BT2 |  BT3 |      |                     |      |      |      |      |RGB_TOG |RGB_BRI|
+        // |      |OUT_TOG|       |      |      |      |                     |      |      |      |      |RGB_EFF |RGB_BRD|
+        // |      |EP_TOG |       |      |      |      |        | - |        |      |      |      |      |EP_TOG  | RESET |
+        //  |---------------------|      |      |      |        | - |        |      |      |      |------------------------
+                                  -----------------------------------------------------------------
+        function_layer {
+            display-name = "SYS.";
+            bindings = <
+                &trans       &trans             &trans        &trans        &trans         &trans                            &trans     &trans    &trans     &trans      &trans            &trans
+                &bt BT_CLR   &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &trans                       &trans     &trans    &trans     &trans      &rgb_ug RGB_TOG   &rgb_ug RGB_BRI
+                &kp CAPSLOCK &out OUT_TOG       &trans        &trans        &trans         &trans                            &trans     &trans    &trans     &trans      &rgb_ug RGB_EFF   &rgb_ug RGB_BRD
+                &sys_reset   &ext_power EP_TOG  &trans        &trans        &trans         &trans        &trans    &trans    &trans     &trans    &trans     &trans      &ext_power EP_TOG &sys_reset
                                                 &trans        &trans        &trans         &trans        &trans    &trans    &trans     &trans
             >;
             
