@@ -25,73 +25,73 @@
         
         // F-key combos - F+number on lower layer
         combo_f1 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 0>;  // F key + 1 key positions
             bindings = <&kp F1>;
             layers = <1>;
         };
         combo_f2 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 1>;  // F key + 2 key positions
             bindings = <&kp F2>;
             layers = <1>;
         };
         combo_f3 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 2>;  // F key + 3 key positions
             bindings = <&kp F3>;
             layers = <1>;
         };
         combo_f4 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 3>;  // F key + 4 key positions
             bindings = <&kp F4>;
             layers = <1>;
         };
         combo_f5 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 4>;  // F key + 5 key positions
             bindings = <&kp F5>;
             layers = <1>;
         };
         combo_f6 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 5>;  // F key + 6 key positions
             bindings = <&kp F6>;
             layers = <1>;
         };
         combo_f7 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 6>;  // F key + 7 key positions
             bindings = <&kp F7>;
             layers = <1>;
         };
         combo_f8 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 7>;  // F key + 8 key positions
             bindings = <&kp F8>;
             layers = <1>;
         };
         combo_f9 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 8>;  // F key + 9 key positions
             bindings = <&kp F9>;
             layers = <1>;
         };
         combo_f10 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 9>;  // F key + 0 key positions
             bindings = <&kp F10>;
             layers = <1>;
         };
         combo_f11 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 10>;  // F key + - key positions
             bindings = <&kp F11>;
             layers = <1>;
         };
         combo_f12 {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <28 11>;  // F key + = key positions
             bindings = <&kp F12>;
             layers = <1>;
@@ -124,14 +124,14 @@
         // |          |       |   ↑   |      |      |      |                     |      | HOME |   ↑  | END  | PSCRN  |   ]   |
         // | CAPSLOCK |    ←  |   ↓   |  →   |      |      |                     |      |   ←  |   ↓  |  →   |        |       |
         // |          |       |       |      |      |      |        | - |        |      |      |      |      |        |       |
-        //                            |      |      |      | LAYER  | - |        |      |      |      |
+        //                            |      |      |      | ENTER  | - | LAYER  |      |      |      |
 
         function_layer {
             display-name = "LOW.";
             bindings = <
                 &kp ESC      &trans      &trans      &trans        &trans         &trans                         &trans     &trans      &trans     &trans      &trans            &trans
                 &trans       &trans      &kp UP      &trans        &trans         &trans                         &trans     &kp HOME    &kp UP     &kp END     &kp PSCRN         &kp RBKT
-                &kp CAPSLOCK &kp LEFT    &kp DOWN    &kp RIGHT     &trans         &trans                         &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans            &trans
+                &kp CAPSLOCK &kp LEFT    &kp DOWN    &kp RIGHT     &none          &trans                         &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans            &trans
                 &trans       &trans      &trans      &trans        &trans         &trans     &trans    &trans    &trans     &trans      &trans     &trans      &trans            &trans
                                                      &trans        &trans         &trans     &kp RET   &mo 2     &trans     &trans      &trans
             >;
