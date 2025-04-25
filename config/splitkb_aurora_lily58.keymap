@@ -103,26 +103,26 @@
 
             // ---------------------------------------------------------------------------------------------------------------------
             // |  ESC    |  1  |  2  |  3   |  4   |  5      |                     |  6   |  7    |  8    |  9   |  0    |   -     | 
-            // |  TAB    |  Q  |  W  |  E   |  R   |  T      |                     |  Y   |  U    |  I    |  O   |   P   |   [     |
+            // |  TAB    |  Q  |  W  |  E   |  R   |  T      |                     |  Y   |  U    |  I    |  O   |   P   |   {     |
             // |  SHIFT  |  A  |  S  |  D   |  F   |  G      |                     |  H   |  J    |  K    |  L   |   ;   |   '     |
-            // |  CTRL   |  \  |  Z  |  X   |  C   |  V      |   B    | - | C_MUTE |  N   |  M    |  ,    |  .   |   /   |   =     |
+            // |  CTRL   |  Z  |  X   |  C  |  V   |  B      |   \    | - | C_MUTE |  N   |  M    |  ,    |  .   |   /   |   \     |
             //  ---------------------| GUI  |  ALT |  LAYER  |  SPACE | - | ENTER  | BSPC |  RALT | DEL   |-------------------------
         //                           ---------------------------------------------------------------------
 
         default_layer {
             display-name = "DEF.";
-            bindings = <
-                &kp ESC     &kp N1               &kp N2     &kp N3     &kp N4     &kp N5                            &kp N6     &kp N7            &kp N8     &kp N9     &kp N0             &kp MINUS        
-                &kp TAB     &kp Q                &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp U             &kp I      &kp O      &kp P              &kp LBKT
-                &kp LSHFT   &kp A                &kp S      &kp D      &kp F      &kp G                             &kp H      &kp J             &kp K      &kp L      &kp SEMI           &kp SQT
-                &kp LCTRL   &kp NON_US_BACKSLASH &kp Z      &kp X      &kp C      &kp V      &kp B     &kp C_MUTE   &kp N      &kp M             &kp COMMA  &kp DOT    &kp FSLH           &kp EQUAL
-                                                            &kp LGUI   &kp LALT   &mo 1      &kp SPACE &kp RET      &kp BSPC   &kp RIGHT_ALT     &kp DELETE
+            bindings = <             
+                &kp ESC     &kp N1       &kp N2     &kp N3     &kp N4     &kp N5                                         &kp N6     &kp N7            &kp N8     &kp N9     &kp N0             &kp MINUS        
+                &kp TAB     &kp Q        &kp W      &kp E      &kp R      &kp T                                          &kp Y      &kp U             &kp I      &kp O      &kp P              &kp LBKT
+                &kp LSHFT   &kp A        &kp S      &kp D      &kp F      &kp G                                          &kp H      &kp J             &kp K      &kp L      &kp SEMI           &kp SQT
+                &kp LCTRL   &kp Z        &kp X      &kp C      &kp V      &kp B   &kp NON_US_BACKSLASH      &kp C_MUTE   &kp N      &kp M             &kp COMMA  &kp DOT    &kp FSLH           &kp BACKSLASH
+                                                    &kp LGUI   &kp LALT   &mo 1   &kp SPACE                 &kp RET      &kp BSPC   &kp RIGHT_ALT     &kp DELETE
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
         // -------------------------------------------------------------------------------------------------------------------
-        // |          |       |       |      |      |      |                     |      |      |      |      |        |       |
-        // |          |       |   ↑   |      |      |      |                     |      | HOME |   ↑  | END  | PSCRN  |   ]   |
+        // |          |       |       |      |      |      |                     |      |      |      |      |        |   =   |
+        // |          |       |   ↑   |ENTER |      |      |                     |      | HOME |   ↑  | END  | PSCRN  |   }   |
         // | CAPSLOCK |    ←  |   ↓   |  →   |      |      |                     |      |   ←  |   ↓  |  →   |        |   \   |
         // |          |       |       |      |      |      |        | - |        |      |      |      |      |        |       |
         //  --------------------------|      |      |      | ENTER  | - | LAYER  |      |      |      |------------------------
@@ -131,8 +131,8 @@
         function_layer {
             display-name = "LOW.";
             bindings = <
-                &trans       &trans      &trans      &trans        &trans         &trans                             &trans     &trans      &trans     &trans      &trans            &trans
-                &trans       &trans      &kp UP      &trans        &trans         &trans                             &trans     &kp HOME    &kp UP     &kp END     &kp PSCRN         &kp RBKT
+                &trans       &trans      &trans      &trans        &trans         &trans                             &trans     &trans      &trans     &trans      &trans            &kp EQUAL
+                &trans       &trans      &kp UP      &kp RET        &trans         &trans                             &trans     &kp HOME    &kp UP     &kp END     &kp PSCRN         &kp RBKT
                 &kp CAPSLOCK &kp LEFT    &kp DOWN    &kp RIGHT     &none          &trans                             &trans     &kp LEFT    &kp DOWN   &kp RIGHT   &trans            &kp BACKSLASH
                 &trans       &trans      &trans      &trans        &trans         &trans     &trans    &trans        &trans     &trans      &trans     &trans      &trans            &trans
                                                      &trans        &trans         &trans     &kp RET   &mo 2         &trans     &trans      &trans
