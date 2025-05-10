@@ -19,6 +19,10 @@
     triggers-per-rotation = <40>;
 };
 
+&nice_view_spi {
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;  // use D0 for CS
+};
+
 / {
     combos {
         compatible = "zmk,combos";
